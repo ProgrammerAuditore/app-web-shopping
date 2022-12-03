@@ -3,6 +3,8 @@ import  express from "express";
 import { pool } from "./db.js"; 
 const app = express();
 
+console.log(process.env);
+
 app.get("/", (req, res) => {
     res.send("Home")
 });
