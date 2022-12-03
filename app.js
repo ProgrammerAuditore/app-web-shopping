@@ -3,6 +3,7 @@ const express = require("express");
 const app = express();
 const conexion = require("./conexion");
 const {APP_PORT} = process.env;
+
 conexion.connect();
 
 conexion.query('SELECT 1 + 1 AS solution', function (error, results, fields) {
