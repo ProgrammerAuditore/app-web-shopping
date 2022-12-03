@@ -1,9 +1,8 @@
 
 import  express from "express";
 import { pool } from "./db.js"; 
+import { PORT } from "./config.js";
 const app = express();
-
-console.log(process.env);
 
 app.get("/", (req, res) => {
     res.send("Home")
@@ -15,4 +14,4 @@ app.get("/ping", async (req, res) => {
     res.send("Conexion  a db");
 });
 
-app.listen(3000, () => { console.log(`Server: ON port 3000`) });
+app.listen(PORT, () => { console.log(`Server: ON port ${PORT}`) });
